@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="eval <= 0.5\ngini = 0.5\nsamples = 5887\nvalue = [2943, 2944]\nclass = Malicious", fillcolor="#ffffff"] ;
+1 [label="ConditionalExpression <= 1.5\ngini = 0.394\nsamples = 3770\nvalue = [2754, 1016]\nclass = Benign", fillcolor="#efaf82"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+5 [label="VariableDeclarator <= 80.5\ngini = 0.456\nsamples = 2561\nvalue = [1660, 901]\nclass = Benign", fillcolor="#f3c5a4"] ;
+1 -> 5 ;
+7 [label="str_fromCharCode <= 0.5\ngini = 0.365\nsamples = 2174\nvalue = [1651, 523]\nclass = Benign", fillcolor="#eda978"] ;
+5 -> 7 ;
+9 [label="(...)", fillcolor="#C0C0C0"] ;
+7 -> 9 ;
+10 [label="(...)", fillcolor="#C0C0C0"] ;
+7 -> 10 ;
+8 [label="gini = 0.045\nsamples = 387\nvalue = [9, 378]\nclass = Malicious", fillcolor="#3e9fe6"] ;
+5 -> 8 ;
+6 [label="BinaryExpression <= 278.5\ngini = 0.172\nsamples = 1209\nvalue = [1094, 115]\nclass = Benign", fillcolor="#e88e4e"] ;
+1 -> 6 ;
+13 [label="gini = 0.046\nsamples = 1066\nvalue = [1041, 25]\nclass = Benign", fillcolor="#e6843e"] ;
+6 -> 13 ;
+14 [label="gini = 0.467\nsamples = 143\nvalue = [53, 90]\nclass = Malicious", fillcolor="#aed7f4"] ;
+6 -> 14 ;
+2 [label="dom_operations <= 9.0\ngini = 0.163\nsamples = 2117\nvalue = [189, 1928]\nclass = Malicious", fillcolor="#4ca7e8"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="gini = 0.007\nsamples = 1935\nvalue = [7, 1928]\nclass = Malicious", fillcolor="#3a9de5"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 182\nvalue = [182, 0]\nclass = Benign", fillcolor="#e58139"] ;
+2 -> 4 ;
+}
